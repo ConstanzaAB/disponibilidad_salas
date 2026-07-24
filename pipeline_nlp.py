@@ -1,6 +1,6 @@
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 
 try:
@@ -121,7 +121,7 @@ class BibliotecaMagnoliaPipeline:
             datos = self.fetch_and_extract()
             payload = {
                 "status": "success",
-                "timestamp": datetime.now().isoformat(),
+                "timestamp": datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
                 "data": datos
             }
             print(f"[{datetime.now().strftime('%H:%M:%S')}] ✅ Extracción exitosa: {datos['total_salas']} salas procesadas.")
@@ -129,7 +129,7 @@ class BibliotecaMagnoliaPipeline:
             print(f"[{datetime.now().strftime('%H:%M:%S')}] ❌ Error: {e}")
             payload = {
                 "status": "error",
-                "timestamp": datetime.now().isoformat(),
+                "timestamp": datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
                 "message": str(e)
             }
 
