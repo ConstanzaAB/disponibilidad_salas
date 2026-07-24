@@ -1,13 +1,14 @@
-name: Executar Pipeline NLP para Magnolia
+name: Pipeline Extractor Salas Biblioteca
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Se ejecuta exactamente al minuto 0 de cada hora
-  workflow_dispatch:      # Permite la ejecución manual desde la interfaz de GitHub
+    - cron: '0 * * * *'  # Se ejecuta cada hora
+  workflow_dispatch:      # Permite ejecución manual
 
 jobs:
-  build-and-run:
+  run-pipeline:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout del código
         uses: actions/checkout@v4
@@ -17,19 +18,23 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Instalar Dependencias de Python y NLP
+      - name: Instalar Dependencias de Python, Playwright y Click
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 spacy
-          python -m spacy download es_core_news_sm
+          pip install beautifulsoup4 playwright click
 
-      - name: Ejecutar Script de Extracción y NLP
+      - name: Instalar Navegador Chromium y Dependencias del Sistema
+        run: |
+          npx playwright install-deps chromium
+          playwright install chromium
+
+      - name: Ejecutar Script de Extracción del Catálogo
         run: python pipeline_nlp.py
 
       - name: Guardar y Publicar JSON Actualizado
         run: |
-          git config --global user.name 'Magnolia Bot'
-          git config --global user.email 'bot@magnolia.com'
+          git config --global user.name 'Biblioteca Bot'
+          git config --global user.email 'bot@biblioteca.com'
           git add datos_magnolia.json
-          git commit -m "Auto-update: Datos procesados por NLP [$(date -u +'%Y-%m-%dT%H:%M:%SZ')]" || exit 0
+          git commit -m "Auto-update: Estado de salas/ejemplares [$(date -u +'%Y-%m-%dT%H:%M:%SZ')]" || exit 0
           git push
