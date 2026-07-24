@@ -1,9 +1,13 @@
-name: Pipeline Extractor Sala Biblioteca
+name: Pipeline Extractor Catalogo Biblioteca
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Se ejecuta cada hora
-  workflow_dispatch:      # Permite ejecución manual desde GitHub
+    - cron: '0 * * * *'  # Se ejecuta automáticamente cada hora
+  workflow_dispatch:      # Permite la ejecución manual desde la pestaña Actions
+
+# Otorga permisos explícitos de escritura al token de GitHub Actions
+permissions:
+  contents: write
 
 jobs:
   run-pipeline:
@@ -32,9 +36,11 @@ jobs:
         run: python pipeline_nlp.py
 
       - name: Guardar y Publicar JSON Actualizado
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name 'Biblioteca Bot'
           git config --global user.email 'bot@biblioteca.com'
           git add datos_magnolia.json
           git commit -m "Auto-update: Estado de salas/ejemplares [$(date -u +'%Y-%m-%dT%H:%M:%SZ')]" || exit 0
-          git push
+          git push origin main
