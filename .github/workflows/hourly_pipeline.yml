@@ -1,0 +1,35 @@
+name: Executar Pipeline NLP para Magnolia
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Se ejecuta exactamente al minuto 0 de cada hora
+  workflow_dispatch:      # Permite la ejecución manual desde la interfaz de GitHub
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Instalar Dependencias de Python y NLP
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 spacy
+          python -m spacy download es_core_news_sm
+
+      - name: Ejecutar Script de Extracción y NLP
+        run: python pipeline_nlp.py
+
+      - name: Guardar y Publicar JSON Actualizado
+        run: |
+          git config --global user.name 'Magnolia Bot'
+          git config --global user.email 'bot@magnolia.com'
+          git add datos_magnolia.json
+          git commit -m "Auto-update: Datos procesados por NLP [$(date -u +'%Y-%m-%dT%H:%M:%SZ')]" || exit 0
+          git push
