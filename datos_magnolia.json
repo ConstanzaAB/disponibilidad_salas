@@ -1,9 +1,80 @@
 {
   "status": "success",
-  "timestamp": "2026-08-23T01:36:02Z",
+  "timestamp": "2026-08-23T02:48:57Z",
   "data": {
-    "encabezado": "Ingeniería - Biblioteca Central",
-    "total_salas": 0,
-    "items": []
+    "encabezado": "[Sala de estudio Biblioteca Central FCFM] [realia]. - Universidad de Chile",
+    "total_salas": 10,
+    "items": [
+      {
+        "sala": "Sala estudio 5",
+        "disponible": true,
+        "estado_texto": "Disponible",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "Colección Cubículos de Estudio"
+      },
+      {
+        "sala": "[Sala de estudio Biblioteca Central FCFM] [realia]",
+        "disponible": false,
+        "estado_texto": "Consultar",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
+      },
+      {
+        "sala": "Colección Cubículos de Estudio",
+        "disponible": true,
+        "estado_texto": "Disponible",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "CF20 Salas FCFM"
+      },
+      {
+        "sala": "Sala estudio 4",
+        "disponible": true,
+        "estado_texto": "Ejemplar en Biblioteca (0 solicitudes)",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
+      },
+      {
+        "sala": "Sala estudio 3",
+        "disponible": true,
+        "estado_texto": "Ejemplar en Biblioteca (0 solicitudes)",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
+      },
+      {
+        "sala": "Sala estudio 2",
+        "disponible": true,
+        "estado_texto": "Ejemplar en Biblioteca (0 solicitudes)",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
+      },
+      {
+        "sala": "Sala estudio 1",
+        "disponible": true,
+        "estado_texto": "Ejemplar en Biblioteca (0 solicitudes)",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
+      },
+      {
+        "sala": "[Sala de estudio Biblioteca Central FCFM] [realia].",
+        "disponible": false,
+        "estado_texto": "Préstamo en la oficina 1 por orden de llegada. No se realizará ninguna reserva previa.",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "Ubicadas en la Torre Justicia Espada piso -1."
+      },
+      {
+        "sala": "5 salas de estudio. capacidad para 5 personas cada una.",
+        "disponible": false,
+        "estado_texto": "Consultar",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
+      },
+      {
+        "sala": "[Sala de estudio Biblioteca Central FCFM]",
+        "disponible": false,
+        "estado_texto": "Consultar",
+        "ocupada_hasta": null,
+        "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
+      }
+    ]
   }
 }
