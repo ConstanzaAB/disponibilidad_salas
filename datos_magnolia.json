@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "timestamp": "2026-08-27T20:44:40Z",
+  "timestamp": "2026-08-28T04:29:38Z",
   "data": {
     "encabezado": "[Sala de estudio Biblioteca Central FCFM] [realia]. - Universidad de Chile",
     "total_salas": 10,
@@ -42,9 +42,9 @@
       },
       {
         "sala": "Sala estudio 2",
-        "disponible": false,
-        "estado_texto": "En préstamo - vencido desde 27/08/2026 16:30:05 CLT (0 solicitudes)",
-        "ocupada_hasta": "16:30:05 CLT",
+        "disponible": true,
+        "estado_texto": "Ejemplar en Biblioteca (0 solicitudes)",
+        "ocupada_hasta": null,
         "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
       },
       {
