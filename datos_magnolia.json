@@ -1,15 +1,15 @@
 {
   "status": "success",
-  "timestamp": "2026-09-25T19:18:44Z",
+  "timestamp": "2026-09-25T22:27:14Z",
   "data": {
     "encabezado": "[Sala de estudio Biblioteca Central FCFM] [realia]. - Universidad de Chile",
     "total_salas": 10,
     "items": [
       {
         "sala": "Sala estudio 5",
-        "disponible": false,
-        "estado_texto": "En préstamo hasta 25/09/2026 16:50:43 CLST (0 solicitudes)",
-        "ocupada_hasta": "25/09/2026 16:50:43",
+        "disponible": true,
+        "estado_texto": "Disponible",
+        "ocupada_hasta": null,
         "ubicacion_desplegada": "Colección Cubículos de Estudio"
       },
       {
@@ -21,37 +21,37 @@
       },
       {
         "sala": "Colección Cubículos de Estudio",
-        "disponible": false,
-        "estado_texto": "Consultar",
+        "disponible": true,
+        "estado_texto": "Disponible",
         "ocupada_hasta": null,
         "ubicacion_desplegada": "CF20 Salas FCFM"
       },
       {
         "sala": "Sala estudio 4",
-        "disponible": false,
-        "estado_texto": "En préstamo hasta 25/09/2026 17:06:01 CLST (0 solicitudes)",
-        "ocupada_hasta": "25/09/2026 17:06:01",
+        "disponible": true,
+        "estado_texto": "Ejemplar en Biblioteca (0 solicitudes)",
+        "ocupada_hasta": null,
         "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
       },
       {
         "sala": "Sala estudio 3",
-        "disponible": false,
-        "estado_texto": "En préstamo hasta 25/09/2026 17:51:31 CLST (0 solicitudes)",
-        "ocupada_hasta": "25/09/2026 17:51:31",
+        "disponible": true,
+        "estado_texto": "Ejemplar en Biblioteca (0 solicitudes)",
+        "ocupada_hasta": null,
         "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
       },
       {
         "sala": "Sala estudio 2",
-        "disponible": false,
-        "estado_texto": "En préstamo hasta 25/09/2026 17:14:41 CLST (0 solicitudes)",
-        "ocupada_hasta": "25/09/2026 17:14:41",
+        "disponible": true,
+        "estado_texto": "Ejemplar en Biblioteca (0 solicitudes)",
+        "ocupada_hasta": null,
         "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
       },
       {
         "sala": "Sala estudio 1",
-        "disponible": false,
-        "estado_texto": "En préstamo hasta 25/09/2026 16:53:58 CLST (0 solicitudes)",
-        "ocupada_hasta": "25/09/2026 16:53:58",
+        "disponible": true,
+        "estado_texto": "Ejemplar en Biblioteca (0 solicitudes)",
+        "ocupada_hasta": null,
         "ubicacion_desplegada": "Colección Cubículos de Estudio ; CF20 Salas FCFM"
       },
       {
